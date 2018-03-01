@@ -1,6 +1,6 @@
 //Por Yair Reyes
 public class Directorio{
-    Contacto[] listaContactos = new Contacto[6]; //tamaño real de vector -1 por el 0, no quiero que imprima 0 para imprimir desde contacto 1
+    Contacto[] listaContactos = new Contacto[6]; //Agenda pequeña de 5 contactos
     private int ncontactos; // objetos contacto creados
 
 public Directorio(){
@@ -27,7 +27,7 @@ public void listaContactos(){
              System.out.println("¡LA AGENDA ESTA VACIA!");
          }
           else {
-             for (i=1;i<this.ncontactos;i++) { //inicio contador 1 para que imprima contacto 1 //no puedo usar <= porque inicia de 0 el arreglo
+             for (i=1;i<this.ncontactos;i++) { 
                  System.out.print("\nContacto número: " + i + "\n" +"Nombre: " + this.listaContactos[i].getNombre()+ "\n" + "Direccion: " + this.listaContactos[i].getDireccion() + "\n" + "Telefono: " +  this.listaContactos[i].getTelefono() + "\n");
                  System.out.println();
              }
@@ -36,7 +36,7 @@ public void listaContactos(){
 
 public void limpiarContactos(){
   int j;
-  for (j=1;j<this.ncontactos;j++) { //igual en 1 porque empiezo a llenar el arreglo en 1 :v
+  for (j=1;j<this.ncontactos;j++) {
                   this.listaContactos[j].setNombre(" ");
                   this.listaContactos[j].setDireccion(" ");
                   this.listaContactos[j].setTelefono(" ");
@@ -81,27 +81,6 @@ if (!existe) {
     System.out.println("\nEL CONTACTO " + nombre + " NO EXISTE EN ESTA AGENDA :/");
     }
 }
-
-/*public void modContacto(String nombre,String nombre1, String direccion1, String telefono1){
-  int m;
-
-//Borro el contenido en esa posicion
-        for(m=1;m<ncontactos;m++){
-          if (nombre.equals(this.listaContactos[m].getNombre())) {
-            System.out.print("\nContacto número: " + m + "\n" +"Nombre: " + this.listaContactos[m].getNombre()+ "\n" + "Direccion: " + this.listaContactos[m].getDireccion() + "\n" + "Telefono: " +  this.listaContactos[m].getTelefono() + "\n");
-            System.out.println("ESTE CONTACTO " + "'" + nombre + "'" + " SERA MODIFICADO :)");
-            this.listaContactos[m].setNombre(" ");
-            this.listaContactos[m].setDireccion(" ");
-            this.listaContactos[m].setTelefono(" ");
-
-//Modificamos
-            this.listaContactos[m].setNombre(nombre1);
-            this.listaContactos[m].setDireccion(direccion1);
-            this.listaContactos[m].setTelefono(telefono1);
-          }
-      }
-
-}  */
 
 public void modContactoNombre(String nombre, String nombre1){
   int m;
