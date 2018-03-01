@@ -16,16 +16,16 @@ this.telefono=telefono;
 
 }
 
-public void setNombre(String nom){
-  this.nombre=nom;
+public void setNombre(String nombre){
+  this.nombre=nombre;
 }
 
-public void setDireccion(String dir){
-this.direccion=dir;
+public void setDireccion(String direccion){
+this.direccion=direccion;
 }
 
-public void setTelefono(String telf){
-this.telefono=telf;
+public void setTelefono(String telefono){
+this.telefono=telefono;
 }
 
 public String getNombre(){
